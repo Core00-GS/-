@@ -27,11 +27,11 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
       run: |
-        # Lint only the specified file
-        flake8 game2.py --count --select=E9,F63,F7,F82 --show-source --statistics
+        # Lint only the specified Game2.py file
+        flake8 Game2.py --count --select=E9,F63,F7,F82 --show-source --statistics
         # Exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-        flake8 game2.py --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+        flake8 Game2.py --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        # Run tests specifically targeting game2.py
-        pytest game2.py
+        # Run tests specifically targeting Game2.py
+        pytest Game2.py
